@@ -21,9 +21,13 @@ html {
     overflow-x: hidden;
 }
 
-body {
-    position: relative
+@include mobile-only {
+    body {
+        position: relative;
+        overflow-x: hidden;
+    }
 }
+
 
 body {
     font-size: 1.8rem;
