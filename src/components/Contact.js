@@ -26,7 +26,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className="contact container">
+            <section className="contact container site">
                 <div className="contact__title">
                     <p>35,000+ Already Joined</p>
                     <h2>Stay up-to-date with what<br /> we're doing</h2>

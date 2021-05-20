@@ -3,7 +3,7 @@ import heroImg from '../images/illustration-hero.svg';
 const Hero = () => {
     return (
         <>
-            <section className="hero">
+            <section className="hero site">
                 <div className="hero__bg-img flex"></div>
                 <div className="hero__img">
                     <img src={heroImg} alt="Demonstration" />
