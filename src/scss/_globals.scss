@@ -17,6 +17,15 @@ html {
 
 // Pattern styles
 
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative
+}
+
 body {
     font-size: 1.8rem;
     overflow-x: hidden;
