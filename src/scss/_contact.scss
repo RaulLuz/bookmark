@@ -1,0 +1,106 @@
+.contact {
+    text-align: center;
+    background: $softBlue;
+    padding-top: 4.8rem;
+    padding-bottom: 3rem;
+
+    &__title {
+
+        color: #fff;
+
+        p {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3.2px;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            font-size: 3rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet-portrait-up {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &-email {
+            position: relative;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 29rem;
+
+            @include tablet-portrait-up {
+                margin-right: 2rem;
+            }
+
+            &.invalid {
+
+                #inputTxt {
+                    border: 2px solid $softRed;
+                    background-image: url('../images/icon-error.svg');
+                    background-repeat: no-repeat;
+                    background-position: 95% center;
+                }
+
+                &:after {
+                    content: "Whoops, make sure it's an email";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -1.1rem;
+                    font-size: 1.2rem;
+                    font-style: italic;
+                    font-weight: 500;
+                    color: #fff;
+                    background: $softRed;
+                    border-radius: 3px 3px 5px 5px;
+                    padding: .7rem 0 .7rem 1rem;
+                    text-align: left;
+                    // width: 35.6rem;
+                    width: 96.6%;
+                }
+            }
+
+            #inputTxt {
+                border: 2px solid transparent;
+                margin-bottom: 1.5rem;
+                border-radius: 5px;
+                padding: 1.2rem 2rem;
+                color: $veryDarkBlue;
+                outline: none;
+                font-size: 1.4rem;
+                width: 100%;
+
+                &::placeholder {
+                    opacity: .3;
+                }
+            }
+        }
+
+        #submitBtn {
+            font-weight: 500;
+            max-width: 29rem;
+            width: 96.6%;
+
+            @include tablet-portrait-up {
+                height: 4.6rem;
+                max-width: 12.5rem;
+
+            }
+
+        }
+    }
+}
