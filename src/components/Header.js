@@ -43,7 +43,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="header site">
+            <header className="header">
                 <nav id="navbar" className="flex flex-jc-sb header__nav container fade-in">
 
                     <div className="header__nav-logo">

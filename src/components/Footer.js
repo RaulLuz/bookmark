@@ -6,7 +6,7 @@ import { ImTwitter } from 'react-icons/im'
 const Footer = () => {
     return (
         <>
-            <footer className="footer flex flex-ai-c flex-jc-c container site">
+            <footer className="footer flex flex-ai-c flex-jc-c container">
                 <div className="footer__logo">
                     <img src={footerLogo} alt="" />
                 </div>

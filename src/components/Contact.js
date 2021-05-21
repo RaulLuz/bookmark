@@ -26,7 +26,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className="contact container site">
+            <section className="contact container">
 
                 <div className="contact__title">
                     <p>35,000+ Already Joined</p>

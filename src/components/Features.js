@@ -14,7 +14,7 @@ const Features = () => {
 
     return (
         <>
-            <section className="features site">
+            <section className="features">
                 <div className="features__description container">
                     <h2>Features</h2>
                     <p>Our aim is to make it quick and easy for you to access your <br />favourite websites. Your bookmarks sync between your devices <br />so you can access them on the go.</p>
