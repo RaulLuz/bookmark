@@ -4,7 +4,7 @@ import hamburger from '../images/icon-hamburger.svg'
 import closeMenu from '../images/icon-close.svg'
 import { AiFillFacebook } from 'react-icons/ai'
 import { ImTwitter } from 'react-icons/im'
-
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 const Header = () => {
 
@@ -41,6 +41,17 @@ const Header = () => {
         }
     }; window.addEventListener('scroll', changeBackground);
 
+    const navBarLinkHandler = () => {
+        const navbarMobile = document.querySelector('#navbarMobile')
+        const navbar = document.querySelector('#navbar')
+        const body = document.body
+
+        navbarMobile.classList.remove('open-nav');
+        navbar.classList.remove('hide');
+        body.classList.remove('no-scroll');
+        navbar.classList.remove('fade-out');
+    }
+
     return (
         <>
             <header className="header">
@@ -51,10 +62,30 @@ const Header = () => {
                     </div>
 
                     <ul className="header__nav-menu">
-                        <li><button to="Features">Features</button></li>
-                        <li><button>Pricing</button></li>
-                        <li><button>Contact</button></li>
-                        <li><button className="login-button button-bs">Login</button></li>
+                        <li><Link
+                            to="features"
+                            className="button"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-110}>
+                            Features</Link></li>
+                        <li><Link to="download"
+                            className="button"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-110}>
+                            Download</Link></li>
+                        <li><Link to="faq"
+                            className="button"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-110}
+                            duration={400}>
+                            FAQ</Link></li>
+                        <li><Link className="login-button button-bs button">Login</Link></li>
                     </ul>
 
                     <div id="hamburger" className="hamburger" onClick={() => openNav()}>
@@ -69,9 +100,36 @@ const Header = () => {
                     </div>
 
                     <ul className="header__mobile-nav-menu">
-                        <li><button>Features</button></li>
-                        <li><button>Pricing</button></li>
-                        <li><button>Contact</button></li>
+                        <li><Link to="features"
+                            className="button"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-110}
+                            duration={400}
+                            onClick={navBarLinkHandler}
+                        >
+                            Features</Link></li>
+                        <li><Link to="download"
+                            className="button"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-110}
+                            duration={400}
+                            onClick={navBarLinkHandler}
+                        >
+                            Download</Link></li>
+                        <li><Link to="faq"
+                            className="button"
+                            activeClass="active"
+                            smooth={true}
+                            spy={true}
+                            offset={-110}
+                            duration={400}
+                            onClick={navBarLinkHandler}
+                        >
+                            FAQ</Link></li>
                         <li><button className="login-button">Login</button></li>
                     </ul>
 

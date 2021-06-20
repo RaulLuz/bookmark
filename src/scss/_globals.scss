@@ -77,12 +77,17 @@ body {
         }
     }
 
-    button {
+    button,
+    .button {
         border: none;
         border-radius: 5px;
         font-weight: 500;
         cursor: pointer;
         transition: .2s ease-in-out;
+    }
+
+    .button {
+        align-self: center;
     }
 
     br {
@@ -182,6 +187,11 @@ body {
     visibility: hidden;
 }
 
+.display {
+    visibility: visible;
+    opacity: 1;
+}
+
 .no-scroll {
     overflow: hidden;
 }
@@ -212,4 +222,10 @@ ul li.active-tab {
     @include tablet-landscape-up {
         display: flex;
     }
+}
+
+// Scroll Effect
+
+.active {
+    color: $softRed;
 }
